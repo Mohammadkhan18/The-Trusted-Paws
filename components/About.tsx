@@ -31,23 +31,48 @@ export default function About() {
           {/* Left visual */}
           <div className="reveal">
             <div className="relative">
-              {/* Main image placeholder with elegant styling */}
-              <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-forest/10 to-bark/20 overflow-hidden border border-sand/80 shadow-2xl shadow-forest/10 flex items-center justify-center">
-                <div className="text-center p-12">
-                  <div className="text-9xl mb-4">🐾</div>
-                  <div className="font-display text-forest text-2xl font-medium italic">
+              {/* Main image */}
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-sand/80 shadow-2xl shadow-forest/10">
+                <img
+                  src="/family.jpg"
+                  alt="Professional pet groomer caring for a dog"
+                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+                />
+
+                {/* Quote overlay at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="font-display text-cream text-lg font-medium italic drop-shadow-lg">
                     "Every pet is family"
                   </div>
                 </div>
               </div>
+
               {/* Overlapping accent card */}
               <div className="absolute -bottom-6 -right-6 bg-forest rounded-2xl p-6 shadow-xl">
                 <div className="text-4xl font-display font-bold text-gold-light">3+</div>
                 <div className="text-cream/80 text-sm font-sans mt-1">Years of Excellence</div>
               </div>
-              {/* Small floating badge */}
-              <div className="absolute -top-4 -left-4 bg-gold rounded-xl p-4 shadow-lg">
-                <div className="text-2xl">🏆</div>
+
+              {/* Small floating badge — Trophy replaced with Lucide icon */}
+              <div className="absolute -top-4 -left-4 bg-gold rounded-xl p-4 shadow-lg flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1A1A1A"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                  <path d="M4 22h16" />
+                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                </svg>
               </div>
             </div>
           </div>
@@ -74,7 +99,7 @@ export default function About() {
             </p>
 
             {/* Values row */}
-            <div className="reveal grid grid-cols-3 gap-4">
+            <div className="reveal grid md:grid-cols-3 gap-4">
               {[
                 { icon: "💚", title: "Eco-Safe", desc: "Natural products only" },
                 { icon: "🎓", title: "Certified", desc: "Expert groomers" },
